@@ -6,6 +6,7 @@
     <title>Rounak Pradhan – Cybersecurity Portfolio</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Loading bar animation -->
@@ -17,12 +18,13 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <a href="Rounak Pradhan CV.pdf" class="cv-button" download>Download CV</a>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <li class="cv-item">
+            <a href="Rounak Pradhan CV.pdf" download class="cv-btn">Download CV</a></li>
         </ul>
     </nav>
 
@@ -45,7 +47,7 @@
             <div class="contact-info">
                 <div class="contact-item">Full Name: Rounak Pradhan</div>
                 <div class="contact-item">Degree: BSc (Hons) Networking and IT Security</div>
-                <div class="contact-item">Education: Education: BSc (Hons) Computer Networking and IT Security</div>
+                <div class="contact-item">Education: BSc (Hons) Computer Networking and IT Security</div>
                 <div class="contact-item">Phone: Available upon request</div>
                 <div class="contact-item">Address: Imadol, Lalitpur</div>
                 <div class="contact-item">Email: rounakpradhan4@gmail.com</div>
@@ -148,6 +150,15 @@
         <section id="projects" class="terminal-box">
             <h2 class="gradient-text">Projects</h2>
             <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>Web Application Penetration Testing Framework</h3>
+                    <div class="project-tech">(Nmap, SQLMap, XSStrike, Nuclei, Paramspider, Subjack)</div>
+                    <p>Developed a robust, user-friendly tool to automate vulnerability detection in web applications, integrating powerful tools like Nmap, SQLMap, XSStrike, Nuclei, and Subjack.
+                        The framework features a Tkinter-based GUI with a tabbed interface, real-time scan results, and export options (PDF, CSV, Txt). Leveraging Python and Bash scripting,
+                        it supports comprehensive scanning, exploit management, and customizable settings, enhancing security testing efficiency for professionals.</p>
+                </div>
+                
                 <div class="project-card">
                     <h3>E-commerce Blog Page</h3>
                     <div class="project-tech">(HTML, CSS, JavaScript)</div>
@@ -159,15 +170,6 @@
                     <div class="project-tech">(Burp Suite, PortSwigger)</div>
                     <p>Demonstrated Union-based, Error-based, and Blind SQL Injection. Highlighted methods to detect and prevent vulnerabilities. Used brute-force techniques to test login security.</p>
                 </div>
-
-                <div class="project-card">
-                    <h3>Web Application Penetration Testing Framework</h3>
-                    <div class="project-tech">(Nmap, SQLMap, XSStrike, Nuclei, Paramspider, Subjack)</div>
-                    <p>Developed a robust, user-friendly tool to automate vulnerability detection in web applications, integrating powerful tools like Nmap, SQLMap, XSStrike, Nuclei, and Subjack.
-                        The framework features a Tkinter-based GUI with a tabbed interface, real-time scan results, and export options (PDF, CSV, Txt). Leveraging Python and Bash scripting,
-                        it supports comprehensive scanning, exploit management, and customizable settings, enhancing security testing efficiency for professionals.</p>
-                </div>
-
             </div>
         </section>
 
@@ -195,18 +197,21 @@
         </section>
     </div>
 
-        <section class="terminal-box">
-            <h2 class="gradient-text">Connect</h2>
-
-            <p>
-            <a href="https://github.com/rounaksth">GitHub</a> |
-            <a href="https://www.linkedin.com/in/rounak-pradhan-793a02283/">LinkedIn</a> |
-            <a href="mailto:rounakpradhan4@gmail.com">Email</a>
-            </p>
-
-        </section>
-
     <footer>
+        <div class="footer-connect">
+            <h2 class="gradient-text">Connect</h2>
+            <div class="social-links">
+                <a href="https://github.com/rounaksth" target="_blank" class="connect-btn">
+                    <img src="logo/git logo.jpg" alt="GitHub" class="social-logo"> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/" target="_blank" class="connect-btn">
+                    <img src="logo/linkedin logo.png.webp" alt="LinkedIn" class="social-logo"> LinkedIn
+                </a>
+                <a href="mailto:rounakpradhan4@gmail.com" class="connect-btn">
+                    <img src="logo/gmail logo.jpg" alt="Email" class="social-logo"> Email
+                </a>
+            </div>
+        </div>
         <p class="neon-text">© 2024 Rounak Pradhan | Portfolio</p>
     </footer>
 
@@ -279,10 +284,10 @@
             function isInViewport(element) {
                 const rect = element.getBoundingClientRect();
                 return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                    function isInViewport(element) {
+                        const rect = element.getBoundingClientRect();
+                        return rect.top < window.innerHeight - 100;
+                    }
                 );
             }
             
