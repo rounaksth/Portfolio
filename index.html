@@ -17,6 +17,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
+            <a href="Rounak Pradhan CV.pdf" class="cv-button" download>Download CV</a>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -44,8 +45,8 @@
             <div class="contact-info">
                 <div class="contact-item">Full Name: Rounak Pradhan</div>
                 <div class="contact-item">Degree: BSc (Hons) Networking and IT Security</div>
-                <div class="contact-item">Education: Completed undergraduate studies in Networking and IT Security</div>
-                <div class="contact-item">Phone: Current not available</div>
+                <div class="contact-item">Education: Education: BSc (Hons) Computer Networking and IT Security</div>
+                <div class="contact-item">Phone: Available upon request</div>
                 <div class="contact-item">Address: Imadol, Lalitpur</div>
                 <div class="contact-item">Email: rounakpradhan4@gmail.com</div>
             </div>
@@ -194,6 +195,17 @@
         </section>
     </div>
 
+        <section class="terminal-box">
+            <h2 class="gradient-text">Connect</h2>
+
+            <p>
+            <a href="https://github.com/rounaksth">GitHub</a> |
+            <a href="https://www.linkedin.com/in/rounak-pradhan-793a02283/">LinkedIn</a> |
+            <a href="mailto:rounakpradhan4@gmail.com">Email</a>
+            </p>
+
+        </section>
+
     <footer>
         <p class="neon-text">© 2024 Rounak Pradhan | Portfolio</p>
     </footer>
@@ -252,7 +264,7 @@
             }
             
             // Update animation
-            setInterval(drawMatrixRain, 40);
+            requestAnimationFrame(drawMatrixRain);
             
             // Handle window resize
             window.addEventListener('resize', function() {
