@@ -917,3 +917,19 @@ footer .container {
   .info-list li { grid-template-columns: 100px 1fr; }
   .cert-col li { flex-wrap: wrap; }
 }
+
+/* Styling for certification logos */
+.cert-logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: var(--surface-alt);
+  padding: 4px;
+  border: 1px solid var(--border);
+}
+
+/* Ensure TryHackMe logo turns white in dark mode for high contrast */
+[data-theme="dark"] img[alt*="TryHackMe"] {
+  filter: brightness(3) invert(0);
+}

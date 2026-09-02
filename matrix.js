@@ -168,7 +168,7 @@ const portfolioData = {
   certifications: [
     {
       issuer: "TryHackMe",
-      badge: "TH",
+      badge: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tryhackme.svg",
       items: [
         { name: "Pre Security", date: "Aug 2024", url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-RYTHH9OYR3.png" },
         { name: "Introduction to Cyber Security", date: "Aug 2024", url: "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-7YLJDR26BB.png" },
@@ -179,7 +179,7 @@ const portfolioData = {
     },
     {
       issuer: "AWS Academy",
-      badge: "AWS",
+      badge: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
       items: [
         { name: "Cloud Foundations", date: "2024", url: "https://www.credly.com/badges/01afb590-03ca-4261-b6d9-492b3e7ae927/public_url" },
         { name: "Cloud Operations", date: "2024", url: "https://www.credly.com/badges/fdcb720a-2b8e-488c-ab18-0e567ec1319a/public_url" },

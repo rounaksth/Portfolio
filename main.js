@@ -275,12 +275,21 @@ function renderProjectFilters() {
 /* ---------------------------- Certifications ---------------------------- */
 function renderCertifications() {
   const wrap = document.querySelector("#cert-columns");
+  if (!wrap) return;
+  
   wrap.innerHTML = portfolioData.certifications
     .map(
-      (c) => `
+      (c) => {
+        // Check if c.badge is an image URL (.svg, .png, http/https) or plain text
+        const isImage = typeof c.badge === "string" && (c.badge.includes("/") || c.badge.includes("."));
+        const badgeMarkup = isImage
+          ? `<img src="${c.badge}" alt="${c.issuer} Logo" class="cert-logo-img" />`
+          : `<div class="badge">${c.badge}</div>`;
+
+        return `
       <div class="cert-col reveal">
         <div class="cert-issuer-row">
-          <div class="badge">${c.badge}</div>
+          ${badgeMarkup}
           <h3>${c.issuer}</h3>
         </div>
         <ul>
@@ -293,7 +302,8 @@ function renderCertifications() {
             })
             .join("")}
         </ul>
-      </div>`
+      </div>`;
+      }
     )
     .join("");
   observeReveals();
