@@ -945,8 +945,11 @@ footer .container {
 
 /* Small elegant logo sizing */
 .logo-track img {
-  height: 32px;
-  width: auto;
+  height: 32px !important;
+  max-height: 32px !important;
+  width: auto !important;
+  object-fit: contain;
+  flex-shrink: 0;
   opacity: 0.8;
   transition: opacity 0.3s ease, transform 0.3s ease;
   filter: grayscale(20%);
