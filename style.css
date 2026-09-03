@@ -917,7 +917,62 @@ footer .container {
   .info-list li { grid-template-columns: 100px 1fr; }
   .cert-col li { flex-wrap: wrap; }
 }
+/* Logo Marquee Styling */
+.logo-marquee {
+  width: 100%;
+  overflow: hidden;
+  margin: 1.5rem 0 2.5rem 0;
+  position: relative;
+  background: transparent;
+  padding: 0.5rem 0;
+  /* Adds a smooth fade effect on the left and right edges */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
 
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+}
+
+/* Pause scroll when user hovers */
+.logo-marquee:hover .logo-track {
+  animation-play-state: paused;
+}
+
+/* Small elegant logo sizing */
+.logo-track img {
+  height: 32px;
+  width: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  filter: grayscale(20%);
+}
+
+.logo-track img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Continuous Infinite Keyframes */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* Invert dark logos in dark mode for better visibility */
+[data-theme="dark"] .logo-track img[alt="Cisco"],
+[data-theme="dark"] .logo-track img[alt="GitHub"] {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
 /* Styling for certification logos */
 .cert-logo-img {
   width: 32px;
