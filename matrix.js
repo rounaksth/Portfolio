@@ -22,7 +22,7 @@ const portfolioData = {
     email: "rounakpradhan4@gmail.com",
     phone: "+977-9800700980",
     education: "BSc (Hons) Computer Networking and IT Security",
-    cvFile: "Rounak Pradhan CV.pdf",
+    cvFile: "Rounak Pradhan_CV.pdf",
     social: {
       github: "https://github.com/rounaksth",
       linkedin: "https://www.linkedin.com/in/rounak-pradhan-793a02283/",
