@@ -991,3 +991,95 @@ footer .container {
 [data-theme="dark"] img[alt*="TryHackMe"] {
   filter: brightness(3) invert(0);
 }
+/*Beyond the terminal layout*/
+.outside-ide-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.outside-ide-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+
+.outside-ide-text p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hobby-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hobby-tags .tag {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Photo stack container */
+.photo-stack-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 320px;
+}
+
+.photo-stack {
+  position: relative;
+  width: 260px;
+  height: 320px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Stack cards styling */
+.stack-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease;
+  border: 4px solid var(--surface);
+}
+/* Layering & rotation angles */
+.stack-card:nth-child(1) {
+  z-index: 3;
+  transform: rotate(0deg);
+}
+
+.stack-card:nth-child(2) {
+  z-index: 2;
+  transform: rotate(6deg) translate(8px, 4px);
+}
+
+.stack-card:nth-child(3) {
+  z-index: 1;
+  transform: rotate(-5deg) translate(-6px, 8px);
+}
+
+.photo-stack:hover .stack-card:nth-child(1) {
+  transform: scale(1.02) rotate(-1deg);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .outside-ide-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

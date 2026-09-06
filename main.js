@@ -368,7 +368,32 @@ function initNav() {
     link.addEventListener("click", () => nav.classList.remove("open"))
   );
 }
+/* Interactive photo stack cycling */
+function initPhotoStack() {
+  const stack = document.querySelector("#photoStack");
+  if (!stack) return;
 
+  stack.addEventListener("click", () => {
+    const cards = stack.querySelectorAll(".stack-card");
+    if (cards.length < 2) return;
+
+    // Target top card
+    const topCard = cards[0];
+
+    // Animate top card off to the right
+    topCard.style.transform = "translateX(120%) rotate(15deg)";
+    topCard.style.opacity = "0";
+
+    setTimeout(() => {
+      // Move top card to bottom of container
+      stack.appendChild(topCard);
+
+      // Reseting inline styles so CSS layering takes over automatically
+      topCard.style.transform = "";
+      topCard.style.opacity = "";
+    }, 300);
+  });
+}
 /* --------------------------------- Init --------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
@@ -384,5 +409,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderContact();
   renderFooterSocial();
   initNav();
+  initPhotoStack();
   observeReveals();
 });
