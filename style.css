@@ -1083,3 +1083,17 @@ footer .container {
     gap: 2rem;
   }
 }
+/* Align name and badge side by side */
+.profile-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* badge size */
+.verified-badge {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  flex-shrink: 0;
+}
