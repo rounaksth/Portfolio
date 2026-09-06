@@ -1085,15 +1085,16 @@ footer .container {
 }
 /* Align name and badge side by side */
 .profile-name-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
 }
 
-/* badge size */
 .verified-badge {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  flex-shrink: 0;
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
 }
